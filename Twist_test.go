@@ -6,16 +6,16 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestGetAnime(t *testing.T) {
-	anime, err := GetAnime("123")
+func TestGetFeed(t *testing.T) {
+	anime, err := GetFeed("500")
 
 	assert.NoError(t, err)
 	assert.NotNil(t, anime)
 	assert.NotNil(t, anime.Episodes)
 }
 
-func TestGetAnimeByKitsuID(t *testing.T) {
-	anime, err := GetAnimeByKitsuID("123")
+func TestGetFeedByKitsuID(t *testing.T) {
+	anime, err := GetFeedByKitsuID("10902")
 
 	assert.NoError(t, err)
 	assert.NotNil(t, anime)
