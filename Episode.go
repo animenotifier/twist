@@ -5,5 +5,4 @@ type Episode struct {
 	Link         string `json:"link"`
 	Number       int    `json:"episode:number"`
 	AnimeTwistID int    `json:"animetwist:id"`
-	KitsuID      int    `json:"kitsu:id"`
 }
