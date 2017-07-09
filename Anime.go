@@ -1,6 +1,6 @@
 package twist
 
-// Anime represents an anime feed object returned by the twist.moe API.
-type Anime struct {
+// Feed represents an anime feed object returned by the twist.moe API.
+type Feed struct {
 	Episodes []*Episode `json:"items"`
 }
