@@ -2,10 +2,10 @@ package twist
 
 import "github.com/parnurzeal/gorequest"
 
-// GetAnime queries a twist.moe anime by the twist.moe internal ID.
-func GetAnime(id string) (*Feed, error) {
+// GetFeed queries a twist.moe feed by the twist.moe internal ID.
+func GetFeed(twistID string) (*Feed, error) {
 	var anime *Feed
-	_, _, errs := gorequest.New().Get("https://twist.moe/upload-feed?format=json&animeId=" + id).EndStruct(&anime)
+	_, _, errs := gorequest.New().Get("https://twist.moe/upload-feed?format=json&animeId=" + twistID).EndStruct(&anime)
 
 	if len(errs) > 0 {
 		return nil, errs[0]
@@ -14,10 +14,10 @@ func GetAnime(id string) (*Feed, error) {
 	return anime, nil
 }
 
-// GetAnimeByKitsuID queries a twist.moe anime by the Kitsu ID.
-func GetAnimeByKitsuID(id string) (*Feed, error) {
+// GetFeedByKitsuID queries a twist.moe feed by the Kitsu ID.
+func GetFeedByKitsuID(kitsuID string) (*Feed, error) {
 	var anime *Feed
-	_, _, errs := gorequest.New().Get("https://twist.moe/upload-feed?format=json&kitsuId=" + id).EndStruct(&anime)
+	_, _, errs := gorequest.New().Get("https://twist.moe/upload-feed?format=json&kitsuId=" + kitsuID).EndStruct(&anime)
 
 	if len(errs) > 0 {
 		return nil, errs[0]
