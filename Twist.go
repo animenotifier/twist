@@ -7,7 +7,7 @@ import (
 	"github.com/parnurzeal/gorequest"
 )
 
-var endpoint = "https://twist.moe/upload-feed"
+var endpoint = "https://twist.moe/feed/episodes"
 
 // GetFeed queries a twist.moe feed by the twist.moe internal ID.
 func GetFeed(twistID string) (*Feed, error) {
