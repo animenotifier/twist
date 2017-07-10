@@ -7,7 +7,7 @@ import (
 )
 
 func TestGetFeed(t *testing.T) {
-	anime, err := GetFeed("500")
+	anime, err := GetFeed("872")
 
 	assert.NoError(t, err)
 	assert.NotNil(t, anime)
