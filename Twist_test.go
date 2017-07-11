@@ -21,3 +21,12 @@ func TestGetFeedByKitsuID(t *testing.T) {
 	assert.NotNil(t, anime)
 	assert.NotNil(t, anime.Episodes)
 }
+
+func TestGetAnimeIndex(t *testing.T) {
+	list, err := GetAnimeIndex()
+
+	assert.NoError(t, err)
+	assert.NotNil(t, list)
+	assert.NotNil(t, list.Items)
+	assert.NotEmpty(t, list.KitsuIDs())
+}
